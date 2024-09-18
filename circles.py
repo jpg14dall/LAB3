@@ -9,6 +9,13 @@ class Circle:
     def diameter(self):
         return (2 * self.radius)
 
+        return (self.radius ** 2)
+    
+    def circumference(self):
+            return (2 * pi * self.radius)
+
+
+
 def radius_validation():
     c = Circle(-42)
     assert c.radius == 1, "Radius was not changed to correct fallback value."
@@ -21,11 +28,16 @@ def diameter_test():
     c = Circle(8)
     assert c.diameter() == 16, "Diameter incorrect"
 
+def circumference_test():
+    c = Circle(10)
+    assert round(c.circumference(), 2) == 62.83, "Circumference incorrect"
+
 if __name__ == "__main__":
     functions_to_run = [
         radius_validation,
         radius_test,
-        diameter_test
+        diameter_test,
+        circumference_test
     ]
 
     for fn in functions_to_run:
