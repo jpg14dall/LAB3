@@ -7,7 +7,7 @@ class Circle:
             self.radius = 1
     
     def diameter(self):
-        return (self.radius ** 2)
+        return (2 * self.radius)
 
 def radius_validation():
     c = Circle(-42)
