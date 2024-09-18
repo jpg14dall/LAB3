@@ -8,8 +8,6 @@ class Circle:
     
     def diameter(self):
         return (2 * self.radius)
-
-        return (self.radius ** 2)
     
     def circumference(self):
             return (2 * pi * self.radius)
