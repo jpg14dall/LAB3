@@ -10,9 +10,10 @@ class Circle:
         return (2 * self.radius)
     
     def circumference(self):
-            return (2 * pi * self.radius)
-
-
+        return (2 * pi * self.radius)
+    
+    def area(self):
+        return (pi * self.radius**2)
 
 def radius_validation():
     c = Circle(-42)
@@ -29,13 +30,18 @@ def diameter_test():
 def circumference_test():
     c = Circle(10)
     assert round(c.circumference(), 2) == 62.83, "Circumference incorrect"
+    
+def area_test():
+    c = Circle(15)
+    assert round(c.area(), 2) == 706.86, "Area incorrect"
 
 if __name__ == "__main__":
     functions_to_run = [
         radius_validation,
         radius_test,
         diameter_test,
-        circumference_test
+        circumference_test,
+        area_test
     ]
 
     for fn in functions_to_run:
